@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>陈耿林的第一个页面</title>
+</head>
+
+<body>
+    <div id="app-1">
+        <div>
+            {{ message1 }}
+        </div>
+
+        <div>
+            <span v-bind:title="message2">
+                鼠标停留在此处有彩蛋
+            </span>
+        </div>
+
+        <div v-if="seen">
+            你能不能看到我啊
+        </div>
+
+        <div>
+            <ul>
+                <li v-for="mem in todos">
+                    {{ mem.text }}
+                    </v-for>
+            </ul>
+        </div>
+
+        <div>
+            <p>{{message3}}</p>
+            <button v-on:click="clickEgg">点击有彩蛋</button>
+        </div>
+
+        <div>
+            <p>{{message4}}</p>
+            <input v-model="message4">
+        </div>
+    </div>
+
+    
+</body>
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script src="js/firstjs.js"></script>
+
+</html>
